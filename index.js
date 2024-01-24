@@ -3,7 +3,7 @@ const url = require('node:url');
 const fs = require('node:fs');
 
 http.createServer(function (req, res) {
-    // server logic goes here
+    
     const q = new URL(req.url, `http://${req.headers.host}`);
     let filename = "." + q.pathname;
     if (filename === "./"){
